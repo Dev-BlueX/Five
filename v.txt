@@ -1,7 +1,6 @@
 game:GetService("Players").LocalPlayer.PlayerGui.Main.Version.Visible = false
 
-pcall(function()
-            game:GetService("Lighting").FantasySky:Destroy()
+game:GetService("Lighting").FantasySky:Destroy()
             local g = game
             local w = g.Workspace
             local l = g.Lighting
