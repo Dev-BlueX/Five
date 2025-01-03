@@ -1134,12 +1134,6 @@ local LogoToggle = Instance.new("ImageLabel")
     end
     return uitab
 end
-    
-    game:GetService("Players").LocalPlayer.Idled:connect(function()
-        game:GetService("VirtualUser"):Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-        wait(1)
-        game:GetService("VirtualUser"):Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-    end)
 
 -- Window
 local Library = Update:Window("","12523036534",Enum.KeyCode.RightControl);
@@ -1157,12 +1151,7 @@ D:AddButton("Click To Copy Link Discord",function()
 setclipboard("https://discord.gg/e4m8fTKDUZ")
 end)
 -- Main Tab
-M:AddSeperator("Farm")
-local ListF = {"Level", "Bone", "Cake Prince"}
-FarmMode = "Level"
-M:AddDropdown("Select Farm Mode", ListF, function(value)
-    FarmMode = value
-end)
+M:AddSeperator("Main")
 
 M:AddToggle("Auto Click", _G.AutoFarm, function(value)
         _G.Click = value
